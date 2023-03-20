@@ -7,7 +7,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Cypress run
+      - name: E2E on Chrome
         uses: cypress-io/github-action@v5
         with:
-          start: npm start
+          browser: chrome
+          spec: cypress/e2e/intercept.cy.js
+          config: cypress.config.js
+          # start: npm start
