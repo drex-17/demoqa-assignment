@@ -1,15 +1,13 @@
 name: Demo QA Test
-"on": push
+on: push
 
 jobs:
-  cupress-run:
+  cypress-run:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3.3.0
-      - name: Setup Node.js environment
-        uses: actions/setup-node@v3.6.0
-      - name: Cypress.io
-        uses: cypress-io/github-action@v5.1.0
+        uses: actions/checkout@v3
+      - name: Cypress run
+        uses: cypress-io/github-action@v5
         with:
           start: npm start
