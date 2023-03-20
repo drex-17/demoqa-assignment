@@ -12,5 +12,5 @@ jobs:
         with:
           browser: chrome
           spec: cypress/e2e/intercept.cy.js
-          config: cypress.config.js
+          config-file: cypress.config.js
           # start: npm start
